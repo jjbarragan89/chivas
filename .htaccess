@@ -1,6 +1,6 @@
 Options +FollowSymLinks
 RewriteEngine on
-#RewriteBase /deeploy-pernod/app/
+#RewriteBase /gitlabforbluemix/
 RewriteBase /
 
 RewriteCond %{SCRIPT_FILENAME} !-d
