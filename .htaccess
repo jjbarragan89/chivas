@@ -1,0 +1,25 @@
+Options +FollowSymLinks
+RewriteEngine on
+#RewriteBase /deeploy-pernod/app/
+RewriteBase /
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+# Rescritura public
+RewriteRule ^theme-v1/js/(.*) core/themes/theme-v1/public/js/$1 [L,NC,QSA]
+RewriteRule ^theme-v1/css/(.*) core/themes/theme-v1/public/css/$1 [L,NC,QSA]
+RewriteRule ^theme-v1/images/(.*) core/themes/theme-v1/public/images/$1 [L,NC,QSA]
+RewriteRule ^theme-v1/fonts/(.*) core/themes/theme-v1/public/fonts/$1 [L,NC,QSA]
+
+RewriteRule ^theme-v2/js/(.*) core/themes/theme-v2/public/js/$1 [L,NC,QSA]
+RewriteRule ^theme-v2/css/(.*) core/themes/theme-v2/public/css/$1 [L,NC,QSA]
+RewriteRule ^theme-v2/images/(.*) core/themes/theme-v2/public/images/$1 [L,NC,QSA]
+RewriteRule ^theme-v2/fonts/(.*) core/themes/theme-v2/public/fonts/$1 [L,NC,QSA]
+
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^(.*) core/index.php?url=$1 [L,QSA]
+RewriteCond %{REQUEST_URI} !public/ [NC]
+RewriteRule ^ core/index.php?url=/ [L,NC,QSA]
