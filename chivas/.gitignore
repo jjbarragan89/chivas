@@ -1,0 +1,12 @@
+# configuration files #
+######################
+.htaccess
+core/config.php
+
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Thumbs.db
