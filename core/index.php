@@ -1,7 +1,7 @@
 <?php  
 ini_set('display_errors','1');
 
-require '/core/config.php';
+require 'config.php';
 Controllers\RoutesController::test();
 die;
 $url=$_GET['url'];
