@@ -1,5 +1,5 @@
 ---
 applications:
- - name: chivas
+ - name: poketera
    random-route: true
    memory: 128M
